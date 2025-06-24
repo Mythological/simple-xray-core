@@ -78,9 +78,13 @@ sudo systemctl reload-or-restart systemd-resolved
 ## Устанавливаем AdGuard Home 
 
 curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+
 or
+
 wget --no-verbose -O - https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
+
 or
+
 fetch -o - https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 
 ## Устанавливаем Iptables-persistent
