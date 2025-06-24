@@ -109,10 +109,9 @@ vi /etc/iptables/rules.v4
 -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 -A INPUT -s 127.0.0.1/32 -p udp -m udp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A INPUT -s 127.0.0.1/32 -p tcp -m tcp --dport 53 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -s {Your home address} -p tcp -m tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -s {Your home address} -p tcp -m tcp --dport 3000 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -s {Your home address} -p tcp -m tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
--A INPUT -p tcp -m tcp --dport 8384 -j ACCEPT
+-A INPUT -s {Your home address}/32 -p tcp -m tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -s {Your home address}/32 -p tcp -m tcp --dport 3000 -m state --state NEW,ESTABLISHED -j ACCEPT
+-A INPUT -s {Your home address}/32 -p tcp -m tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
 -A FORWARD -i {server interface} -j ACCEPT
 -A FORWARD -d {server ip}/32 -p udp -m udp --dport 53 -j ACCEPT
 -A FORWARD -d {server ip}/32 -p tcp -m tcp --dport 53 -j ACCEPT
