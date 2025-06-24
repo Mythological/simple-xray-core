@@ -30,6 +30,11 @@ cat << EOF > /usr/local/etc/xray/config.json
     "log": {
         "loglevel": "warning"
     },
+    "dns": {
+        "servers": [
+            "127.0.0.1"
+        ]
+    },
     "routing": {
         "domainStrategy": "IPIfNonMatch",
         "rules": [
